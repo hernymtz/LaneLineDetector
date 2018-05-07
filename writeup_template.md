@@ -25,7 +25,7 @@ My pipeline, programmed as a function named "refined_process_image ", consists o
 1. A copy of the original image is converted to grayscale, a format which is easier
 to work with.
 
-![Image after applying Grayscale procedure][image1]
+![alt text][image1 "Image after applying Grayscale procedure"]
 
 
 2. The Canny transform is applied to the gray image. A low threshold of 100 and 
