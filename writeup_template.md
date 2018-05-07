@@ -26,10 +26,8 @@ My pipeline, programmed as a function named "refined_process_image ", consists o
 to work with.
 
 ![alt text][image1]
-| ![space-1.jpg](image1) | 
-|:--:| 
-| *Space* |
-*Image after applying Grayscale procedure*
+
+* Caption *
 
 
 2. The Canny transform is applied to the gray image. A low threshold of 100 and 
