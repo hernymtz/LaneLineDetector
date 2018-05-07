@@ -27,7 +27,7 @@ to work with.
 
 ![alt text][image1]
 
-* Caption *
+*Caption*
 
 
 2. The Canny transform is applied to the gray image. A low threshold of 100 and 
