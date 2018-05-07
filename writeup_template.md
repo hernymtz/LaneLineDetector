@@ -1,9 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
 
-
-**Finding Lane Lines on the Road**
-
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Improve the line-drawing function to create continuous lines
@@ -18,31 +15,30 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. PIPELINE DESCRIPTION.
 
-My pipeline, programmed as a function named "refined_process_image ", consists of 6 main steps: 
+The pipeline, coded as a function named "refined_process_image ", consists of 6 main steps: 
 
-1. A copy of the original image is converted to grayscale, a format which is easier
+1. GRAYSCALE CONVERSION: A copy of the original image is converted to grayscale, a format which is easier
 to work with.
 
-![alt text][image1]
+![grayscale image][/examples/grayscale.jpg]
 
-*Caption*
+*Image after grayscale conversion*
 
 
-2. The Canny transform is applied to the gray image. A low threshold of 100 and 
+2. CANNY EDGE DETECTION: The Canny transform is applied to the gray image. A low threshold of 100 and 
 a high threshold of 150 are selected. These values were found through trial and error.
 
 ![alt text][image1]
 
 
-3. Then, a Gaussian Blur is applied to remove detail and noise. We use a kernel size of 7. ( This value
-gives good results).
+3. GAUSSIAN BLURRING: A Gaussian Blur is applied to remove detail and noise. We use a kernel size of 7. ( This value gives good results).
 
 ![alt text][image1]
 
 
-4. A region of interest is cut out of the blurred image by applying a mask. This function will keep
+4. REGION OF INTEREST SELECTION: A region of interest is cut out of the blurred image by applying a mask. This function will keep
 only the region of the image defined by the polygon formed from previously specified "vertices".
 The rest of the image will be set to black.
 
