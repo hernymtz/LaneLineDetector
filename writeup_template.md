@@ -22,7 +22,7 @@ The pipeline, coded as a function named "refined_process_image ", consists of 6 
 1. GRAYSCALE CONVERSION: A copy of the original image is converted to grayscale, a format which is easier
 to work with.
 
-![grayscale image][/examples/grayscale.jpg]
+![grayscale image](/examples/grayscale.jpg])
 
 *Image after grayscale conversion*
 
