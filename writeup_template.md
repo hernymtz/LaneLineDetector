@@ -26,6 +26,7 @@ My pipeline, programmed as a function named "refined_process_image ", consists o
 to work with.
 
 ![alt text][image1]
+*\n*
 *Image after applying Grayscale procedure*
 
 
