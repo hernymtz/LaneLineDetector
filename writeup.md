@@ -22,9 +22,9 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Description of the pipeline and of the modifications made to the draw_lines() function. 
 
-My pipeline, programmed as a function named "refined_process_image ", consists of 6 main steps: 
+The pipeline, programmed as a function named "refined_process_image ", consists of 6 main steps: 
 
 1. A copy of the original image is converted to grayscale, a format which is easier
 to work with.
@@ -52,12 +52,7 @@ The rest of the image will be set to black.
 
 
 5. We take the cropped image and apply the Hough Line Transform to it, detecting straight lines.
-These lines are then processed in the "refined_draw_lines" function: horizontal and vertical lines are discarded, as well as any 
-line with a slope greater than 0.5 or lower than -0.5. After this initial filter, the lines are grouped in 2 sets, one with lines with a 
-positive slope(lines on the left) and another with lines with a negative slope (lines on the right).
-We then calculate the mean slope and center of the lines on each of the sets. These values are then used to draw 
-2 lines (one on the right and the other on the left), each with its respective mean slope value. The length of these 
-lines is fixed: it spans from the lower limit of the image to the horizontal line in the center of the image. The mean center of each of these groups is used to draw the line. 
+These lines are then processed in the "refined_draw_lines" function, which is a modification of the original draw_lines() : horizontal and vertical lines are discarded, as well as any  line with a slope greater than 0.5 or lower than -0.5. After this initial filter,the lines are grouped in 2 sets, one with lines with a positive slope(lines on the left) and another with lines with a negative slope (lines on the right). We then calculate the mean slope and center of the lines on each of the sets. These values are then used to draw 2 lines (one on the right and the other on the left), each with its respective mean slope value. The length of these lines is fixed: it spans from the lower limit of the image to the horizontal line in the center of the image. The mean center of each of these groups is used to draw the line. The previous function just drew all detected images.
 
 ![alt text][image5]
 
@@ -68,7 +63,7 @@ in order to improve visibility.
 ![alt text][image6]
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 
 One potential shortcoming would be what would happen when, for some reason, while taking a turn the main line detected
@@ -81,7 +76,7 @@ Another shortcoming could be large spaces with no painted lines, or extremely cr
 lines. 
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible improvements to the pipeline
 
 A possible improvement could be to process the detected lines as dots, applying linear regression to these and getting a continuous non-linear graphical representation of the lane line. Specific colors could be interpreted as a helping factor when determining what section of the image is a line. 
 
